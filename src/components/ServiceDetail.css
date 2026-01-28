@@ -1,0 +1,97 @@
+.service-detail-container {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    font-family: 'Fira Code', monospace;
+    box-sizing: border-box;
+}
+
+.detail-header {
+    border-bottom: 2px solid #333;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.detail-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.1;
+}
+
+.detail-section {
+    margin-bottom: 2rem;
+}
+
+.section-label {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-content {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #DDD;
+}
+
+.section-content.highlight {
+    color: #CEFF00;
+    /* Electric Volt */
+}
+
+.detail-footer {
+    margin-top: auto;
+    display: flex;
+    gap: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+}
+
+.detail-btn {
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-family: 'Fira Code', monospace;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.detail-btn:hover {
+    background: #FFFFFF;
+    color: #000000;
+}
+
+.detail-btn.primary {
+    border-color: #CEFF00;
+    color: #CEFF00;
+}
+
+.detail-btn.primary:hover {
+    background: #CEFF00;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .detail-title {
+        font-size: 1.5rem;
+    }
+
+    .detail-footer {
+        flex-direction: column;
+    }
+}

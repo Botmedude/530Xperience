@@ -1,0 +1,65 @@
+.manifesto-outer {
+    width: 100%;
+    background-color: #000000;
+    /* Outer Layer: Background */
+    color: #FFFFFF;
+    min-height: 100vh;
+    /* Full-Screen Immersion */
+    padding-block: 0;
+    /* Let Flexbox Handle Spacing */
+    margin: 0;
+    /* Seamless Connection */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Perfect Vertical Centering */
+    position: relative;
+    /* For ScrollIndicator */
+}
+
+.manifesto-inner {
+    width: 100%;
+    max-width: var(--content-max-width);
+    /* Expanded for Symmetry */
+    margin: 0 auto;
+    padding-inline: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.manifesto-headline {
+    font-family: var(--font-stack);
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    color: #FFFFFF;
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+}
+
+.manifesto-body {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.2rem;
+    color: #CCCCCC;
+    line-height: var(--body-line-height);
+    /* Improved Readability */
+    max-width: 70ch;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .manifesto-outer {
+        padding-block: 4rem;
+    }
+
+    .manifesto-headline {
+        margin-bottom: 2rem;
+    }
+
+    .manifesto-body {
+        font-size: 1rem;
+    }
+}

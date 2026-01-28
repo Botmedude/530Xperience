@@ -1,0 +1,45 @@
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 100;
+    /* Must be on top of everything */
+    font-size: 2rem;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.scroll-indicator:hover {
+    opacity: 0.7;
+}
+
+.scroll-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Light theme - black arrow for white backgrounds */
+.scroll-indicator--light {
+    color: #000000;
+}
+
+/* Dark theme - white arrow for black backgrounds */
+.scroll-indicator--dark {
+    color: #FFFFFF;
+}
+
+/* Difference theme - X-Ray effect for split backgrounds */
+.scroll-indicator--difference {
+    color: #FFFFFF;
+    /* Base white color */
+    mix-blend-mode: difference;
+    /* Inverts to black on white bg, stays white on black bg */
+    font-weight: bold;
+}
