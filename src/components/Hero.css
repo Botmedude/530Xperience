@@ -1,264 +1,183 @@
-.split-layout {
+/* ═══════════════════════════════════════════════
+   HERO — Split-Screen Gender Navigation
+   ═══════════════════════════════════════════════ */
+
+.hero-split {
     display: flex;
     width: 100vw;
-    /* Full Viewport Width */
     height: 100vh;
-    /* Full Viewport Height */
     max-width: 100vw;
-    /* Ensure no overflow */
     position: relative;
     margin: 0;
     padding: 0;
-    left: 0;
-    top: 0;
+    overflow: hidden;
 }
 
-.panel {
+/* ── Floating Brand Mark ── */
+.hero-brand-float {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    z-index: 100;
+    mix-blend-mode: difference;
+}
+
+.hero-brand-mark {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    letter-spacing: 3px;
+    text-decoration: none;
+    user-select: none;
+}
+
+/* ── Panels ── */
+.hero-panel {
+    position: relative;
     flex: 1;
-    /* Equal split */
-    width: 50%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 4rem;
-    margin: 0;
-    /* Zero margins */
-    transition: all 0.5s ease;
-}
-
-/* LEFT PANEL */
-.left-panel {
-    background-color: var(--bg-light);
-    color: var(--text-inverse);
-    align-items: flex-start;
-}
-
-.branding-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* Force all children to left edge */
-    gap: 2rem;
-    max-width: var(--content-max-width);
-}
-
-.main-title {
-    font-family: var(--font-stack);
-    font-size: 5rem;
-    font-weight: 700;
-    line-height: 0.9;
-    letter-spacing: var(--title-letter-spacing);
-    color: var(--text-inverse);
-}
-
-.hero-logo-img {
-    /* 1. Force block behavior to kill inline spacing quirks */
-    display: block;
-
-    /* 2. Zero out inherent spacing */
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
-
-    /* 3. Controlled sizing and spacing BELOW the element */
-    width: 100%;
-    max-width: 550px;
-    /* Adjust optical size */
-    height: auto;
-    margin-bottom: 2rem;
-    /* Only add space *underneath* it */
-
-    /* 4. Ensure it doesn't overflow its box */
-    object-fit: contain;
-    align-self: flex-start;
-    /* Double-check left alignment */
-}
-
-.separator {
-    width: 100px;
-    height: 4px;
-    background-color: var(--text-inverse);
-}
-
-.sub-title {
-    font-family: var(--font-stack);
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
-.cta-button {
-    margin-top: 2rem;
-    background-color: var(--text-inverse);
-    color: var(--bg-light);
-    border: none;
-    padding: 1.5rem 2rem;
-    font-family: var(--font-stack);
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.cta-button:hover {
-    transform: translateX(5px);
-    opacity: 0.9;
-}
-
-/* RIGHT PANEL */
-.right-panel {
-    background-color: var(--bg-dark);
-    color: var(--text-main);
     align-items: center;
-    border-left: 1px solid #333;
-    margin: 0;
-    border-right: none;
-    height: 100%;
-}
-
-.tech-container {
-    width: 100%;
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
-
-/* MODULES GRID */
-.modules-grid-container {
-    width: 100%;
-}
-
-.modules-header {
-    font-family: var(--font-stack);
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
-    color: #666;
-}
-
-.modules-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    /* Stack vertically on small screens or just keep list look */
-    gap: 1.5rem;
-}
-
-.module-item {
-    border: 1px solid #FFF;
-    /* Pure White Border */
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    transition: all 0.2s ease;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
     cursor: pointer;
-    /* Clickable */
+    transition: flex 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    overflow: hidden;
+}
+
+.hero-panel--mens {
+    background-image: url('https://images.unsplash.com/photo-1617137968427-85924c800a22?w=1200&q=80');
+}
+
+.hero-panel--womens {
+    background-image: url('https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1200&q=80');
+}
+
+/* Dark overlay */
+.hero-panel__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    transition: background 0.6s ease;
+    z-index: 1;
+}
+
+.hero-panel:hover .hero-panel__overlay {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+/* Hover expansion */
+.hero-panel.is-active {
+    flex: 1.35;
+}
+
+.hero-panel.is-inactive {
+    flex: 0.65;
+}
+
+/* ── Panel Content ── */
+.hero-panel__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.hero-panel__label {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    color: #FFFFFF;
+    letter-spacing: 4px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.hero-panel__sub {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 2px;
+}
+
+.hero-panel__cta {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: #FFFFFF;
+    text-decoration: none;
+    border: 2px solid #FFFFFF;
+    padding: 1rem 2rem;
+    letter-spacing: 1px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
     background: transparent;
 }
 
-.module-item:hover {
-    background-color: var(--bg-light);
-    border-color: var(--bg-light);
+.hero-panel.is-active .hero-panel__cta {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.module-item:hover * {
-    color: var(--bg-dark) !important;
+.hero-panel__cta:hover {
+    background: #FFFFFF;
+    color: #000000;
 }
 
-.module-top {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+/* ── Divider line between panels ── */
+.hero-panel--mens {
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.module-id {
-    font-size: 0.8rem;
-    color: #888;
-    font-weight: 700;
-}
-
-.module-title {
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: var(--text-main);
-    letter-spacing: 0.5px;
-}
-
-.module-desc {
-    font-size: 0.85rem;
-    color: #CCC;
-    line-height: 1.4;
-}
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
 
 @media (max-width: 1024px) {
-    .split-layout {
+    .hero-split {
         flex-direction: column;
-        height: auto;
-        overflow-y: auto;
-        /* Allow scrolling */
     }
 
-    .panel {
+    .hero-panel {
         width: 100%;
-        padding: 3rem;
-        min-height: auto;
-        /* reset */
+        height: 50vh;
+        flex: none !important;
     }
 
-    .left-panel {
-        padding: 3rem 2rem;
-        order: 1;
-        /* Explicitly put white panel first */
+    .hero-panel--mens {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     }
 
-    .right-panel {
-        padding: 3rem 2rem;
-        min-height: 500px;
-        /* Ensure space for terminal/form */
-        order: 2;
-        border-left: none;
-        border-top: 1px solid #333;
+    .hero-panel__cta {
+        opacity: 1;
+        transform: translateY(0);
     }
 
-    .main-title {
-        font-size: 3.5rem;
+    .hero-panel__label {
+        font-size: clamp(2rem, 8vw, 3.5rem);
     }
 }
 
 @media (max-width: 768px) {
-    .main-title {
-        font-size: 13vw;
-        /* Responsive scaling for very small screens */
-        line-height: 0.9;
+    .hero-brand-float {
+        top: 1.2rem;
+        left: 1.2rem;
     }
 
-    .hero-logo-img {
-        max-width: 85%;
-        /* Appropriate scaling for phones */
-        margin-bottom: 1rem;
-        /* Tighter spacing on mobile */
+    .hero-brand-mark {
+        font-size: 1.2rem;
     }
 
-    .panel {
-        padding: 2rem 1.5rem;
+    .hero-panel__content {
+        gap: 1rem;
     }
 
-    .cta-button {
-        width: 100%;
-        min-height: 50px;
-        /* Touch target */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .branding-container {
-        gap: 1.5rem;
-    }
-
-    .tech-container {
-        gap: 2rem;
+    .hero-panel__cta {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.75rem;
     }
 }

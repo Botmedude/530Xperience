@@ -27,7 +27,7 @@ const Manifesto = () => {
                     whileInView="visible"
                     viewport={{ once: true, margin: '-100px' }}
                 >
-                    NO ADIVINAMOS.<br />CALCULAMOS.
+                    SEASON_01 //<br />RAW MATERIALS.<br />ZERO COMPROMISE.
                 </motion.h2>
 
                 <motion.p
@@ -37,7 +37,7 @@ const Manifesto = () => {
                     whileInView="visible"
                     viewport={{ once: true, margin: '-100px' }}
                 >
-                    Muchas agencias venden humo y diseños bonitos. Nosotros vendemos Lógica, Estabilidad y Seguridad. FiveThirty Systems nació para traer la ingeniería de software real a las PyMEs. Nuestro código es un activo, no un gasto.
+                    We don't follow trends — we engineer garments. Every thread is selected, every cut is calculated, every piece is built to outlast the season it was born in. FiveThirty is not fashion. It's infrastructure you wear.
                 </motion.p>
             </div>
             <ScrollIndicator theme="dark" />
