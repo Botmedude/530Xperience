@@ -5,8 +5,8 @@
 .drop-outer {
     width: 100%;
     background: #ffffff;
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid #000000;
+    border-top: 3px solid #000000;
+    border-bottom: 3px solid #000000;
     padding-block: 6rem;
     display: flex;
     align-items: center;
@@ -30,14 +30,15 @@
     display: block;
     font-family: var(--font-mono);
     font-size: 0.65rem;
-    color: #888888;
+    color: var(--accent-magenta);
+    font-weight: bold;
     letter-spacing: 3px;
     margin-bottom: 1.2rem;
 }
 
 .drop-title {
     font-family: var(--font-display);
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-size: clamp(2rem, 4vw, 3.5rem);
     font-weight: 900;
     color: #000000;
     letter-spacing: var(--title-letter-spacing);
@@ -48,7 +49,7 @@
 .drop-subtitle {
     font-family: var(--font-mono);
     font-size: 0.72rem;
-    color: #666666;
+    color: #555555;
     letter-spacing: 1.5px;
 }
 
@@ -67,8 +68,9 @@
 
 .drop-label {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
-    color: #333333;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #000000;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -77,58 +79,65 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    border: 1px solid #000000;
+    border: 3px solid #000000;
     padding: 0 1rem;
     background: #ffffff;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: all 0.1s steps(2, end);
 }
 
 .drop-input-wrap:focus-within {
-    box-shadow: 3px 3px 0 #000000;
-    border-color: #000000;
+    box-shadow: 4px 4px 0 var(--accent-magenta);
+    border-color: var(--accent-magenta);
+    transform: translate(-4px, -4px);
 }
 
 .drop-prompt {
     font-family: var(--font-mono);
     font-size: 0.85rem;
-    color: #888888;
+    color: var(--accent-magenta);
+    font-weight: bold;
     flex-shrink: 0;
 }
 
 .drop-input {
     font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: #000000;
+    font-weight: bold;
     background: transparent;
     border: none;
     outline: none;
     width: 100%;
-    padding: 0.9rem 0;
+    padding: 1rem 0;
     letter-spacing: 0.5px;
 }
 
 .drop-input::placeholder {
-    color: #aaaaaa;
+    color: #888888;
 }
 
 .drop-submit {
     font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    font-weight: bold;
     letter-spacing: 2px;
     color: #ffffff;
     background: #000000;
-    border: 2px solid #000000;
+    border: 3px solid #000000;
     padding: 1rem 2.5rem;
     cursor: pointer;
     text-transform: uppercase;
     align-self: flex-start;
-    transition: background 0.25s ease, color 0.25s ease;
+    transition: all 0.05s steps(2, end);
+    border-radius: 0px;
 }
 
 .drop-submit:hover {
-    background: #ffffff;
+    background: var(--accent-volt);
     color: #000000;
-    border-color: #000000;
+    border-color: var(--accent-volt);
+    transform: translate(4px, 4px);
+    box-shadow: -4px -4px 0px #000000;
 }
 
 /* Status states */
@@ -136,6 +145,7 @@
     font-family: var(--font-mono);
     font-size: 1rem;
     color: #000000;
+    font-weight: bold;
     line-height: 2;
     letter-spacing: 1.5px;
 }

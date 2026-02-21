@@ -13,9 +13,9 @@ const CategoryBanner = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{ duration: 0.1, ease: "linear" }}
                 >
-                    {'>'} EDITORIAL // OCCASION_WEAR
+                    {'>'} ARMOR // DAILY_DEPLOYMENT
                 </motion.span>
 
                 <motion.h2
@@ -23,9 +23,9 @@ const CategoryBanner = () => {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.15, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{ delay: 0.1, duration: 0.1, ease: "linear" }}
                 >
-                    WEAR TO<br />OCCASION
+                    TACTICAL<br />AESTHETIC
                 </motion.h2>
 
                 <motion.p
@@ -33,9 +33,9 @@ const CategoryBanner = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.3, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{ delay: 0.2, duration: 0.1, ease: "linear" }}
                 >
-                    Precision tailoring for every milestone.
+                    Utilitarian gear engineered for the modern grid.
                 </motion.p>
 
                 <motion.a

@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@400;700&display=swap');
 
 :root {
-  /* Colors — White-first B&W */
-  --bg-dark: #000000;
-  --bg-light: #FFFFFF;
-  --bg-off-white: #F5F5F5;
-  --text-main: #000000;
-  --text-inverse: #FFFFFF;
-  --text-muted: #666666;
-  --border-color: #000000;
-  --border-light: #E0E0E0;
+  /* Colors — Brutalist Deep Darks */
+  --bg-dark: #050505;
+  --bg-light: #0f0f0f;
+  --bg-off-white: #1a1a1a;
+  --text-main: #ffffff;
+  --text-inverse: #000000;
+  --text-muted: #888888;
+  --border-color: #333333;
+  --border-light: #444444;
+
+  /* RADIOACTIVE ACCENTS */
+  --accent-volt: #CEFF00;
+  --accent-magenta: #FF00FF;
+  --accent-blue: #00F0FF;
 
   /* Typography */
   --font-display: 'Archivo Black', sans-serif;
@@ -19,16 +24,15 @@
   /* Layout */
   --content-max-width: 1400px;
   --header-height: 96px;
-  /* promo bar ~28px + nav ~64px */
   --section-padding-block: 6rem;
   --spacing-unit: 8px;
 
   /* Typography */
-  --title-letter-spacing: -0.03em;
+  --title-letter-spacing: -0.05em;
   --body-line-height: 1.6;
 
-  /* Easing */
-  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  /* Easing - Exploding, rigid transitions */
+  --ease-premium: steps(4, end);
 }
 
 * {
@@ -43,20 +47,22 @@ body,
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: #ffffff;
+  background-color: var(--bg-dark);
   margin: 0;
   padding: 0;
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
+  /* Remove smooth scroll for brutalist feel */
 }
 
 body {
   color: var(--text-main);
   font-family: var(--font-mono);
   -webkit-font-smoothing: antialiased;
-  background: #ffffff;
+  background: var(--bg-dark);
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.2) 2px, rgba(0, 0, 0, 0.2) 4px);
   min-height: 100vh;
 }
 

@@ -14,19 +14,19 @@ const Footer = () => {
 
                 {/* Column 2: Product */}
                 <div className="footer-col">
-                    <div className="footer-label">PRODUCT</div>
-                    <a href="#products" className="footer-item">NEW_ARRIVALS</a>
+                    <div className="footer-label">COLLECTION</div>
+                    <a href="#products" className="footer-item">NEW_DROP</a>
                     <a href="#man" className="footer-item">MENSWEAR</a>
                     <a href="#woman" className="footer-item">WOMENSWEAR</a>
-                    <a href="#kids" className="footer-item">KIDS</a>
+                    <a href="#archive" className="footer-item">ARCHIVE</a>
                 </div>
 
                 {/* Column 3: Categories */}
                 <div className="footer-col">
-                    <div className="footer-label">CATEGORIES</div>
-                    <a href="#" className="footer-item">COLLECTIONS</a>
-                    <a href="#drop-access" className="footer-item">DROP_ACCESS</a>
-                    <a href="/about" className="footer-item">ABOUT_US</a>
+                    <div className="footer-label">INFORMATION</div>
+                    <a href="#" className="footer-item">LOOKBOOK</a>
+                    <a href="#drop-access" className="footer-item">EARLY_ACCESS</a>
+                    <a href="/about" className="footer-item">ABOUT_BRAND</a>
                     <a href="/shipping" className="footer-item">SHIPPING</a>
                 </div>
 
@@ -41,7 +41,7 @@ const Footer = () => {
 
             {/* Copyright Bar */}
             <div className="footer-copyright">
-                © 2026 FIVETHIRTY_XPERIENCE // ALL_RIGHTS_RESERVED // SS26_COLLECTION
+                © 2026 FIVETHIRTY_XPERIENCE // ALL_RIGHTS_RESERVED // SYSTEM_VERSION_26.0
             </div>
         </footer>
     );

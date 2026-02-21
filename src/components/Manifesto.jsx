@@ -35,7 +35,7 @@ const Manifesto = () => {
                     whileInView="visible"
                     viewport={{ once: true, margin: '-100px' }}
                 >
-                    We don't follow trends — we engineer garments. Every thread is selected, every cut is calculated, every piece is built to outlast the season it was born in. FiveThirty is not fashion. It's infrastructure you wear.
+                    We don't follow trends — we engineer garments. Every thread is rigorously tested, every seam is structurally defined, every pattern is built to outlast the season it was compiled in. FiveThirty is not just fashion. It's digital concrete you can wear.
                 </motion.p>
             </div>
         </section>

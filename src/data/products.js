@@ -15,8 +15,8 @@ const products = [
         category: 'mens',
         brandLine: 'core',
         images: [
-            'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80',
-            'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=80',
+            '/images/prod_m_tee_1771716756396.png',
+            '/images/prod_m_tee_1771716756396.png',
         ],
     },
     {
@@ -26,8 +26,8 @@ const products = [
         category: 'mens',
         brandLine: 'core',
         images: [
-            'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&q=80',
-            'https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=800&q=80',
+            '/images/prod_m_cargo_1771716769612.png',
+            '/images/prod_m_cargo_1771716769612.png',
         ],
     },
     {
@@ -37,8 +37,8 @@ const products = [
         category: 'mens',
         brandLine: 'core',
         images: [
-            'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=800&q=80',
-            'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&q=80',
+            '/images/prod_m_jacket_1771716809829.png',
+            '/images/prod_m_jacket_1771716809829.png',
         ],
     },
     {
@@ -48,8 +48,8 @@ const products = [
         category: 'mens',
         brandLine: 'core',
         images: [
-            'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80',
-            'https://images.unsplash.com/photo-1578768079470-f8e97e87886f?w=800&q=80',
+            '/images/cat_man_1771716716009.png',
+            '/images/cat_man_1771716716009.png',
         ],
     },
 
@@ -61,8 +61,8 @@ const products = [
         category: 'womens',
         brandLine: 'core',
         images: [
-            'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=800&q=80',
-            'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=800&q=80',
+            '/images/prod_w_dress_1771716783292.png',
+            '/images/prod_w_dress_1771716783292.png',
         ],
     },
     {
@@ -72,8 +72,8 @@ const products = [
         category: 'womens',
         brandLine: 'core',
         images: [
-            'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80',
-            'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&q=80',
+            '/images/prod_w_pants_1771716796747.png',
+            '/images/prod_w_pants_1771716796747.png',
         ],
     },
     {
@@ -83,8 +83,8 @@ const products = [
         category: 'womens',
         brandLine: 'core',
         images: [
-            'https://images.unsplash.com/photo-1548624313-0396c75e4b1a?w=800&q=80',
-            'https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?w=800&q=80',
+            '/images/prod_w_blazer_1771716823020.png',
+            '/images/prod_w_blazer_1771716823020.png',
         ],
     },
     {
@@ -94,8 +94,8 @@ const products = [
         category: 'womens',
         brandLine: 'core',
         images: [
-            'https://images.unsplash.com/photo-1434389677669-e08b4cda3a69?w=800&q=80',
-            'https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?w=800&q=80',
+            '/images/cat_woman_1771716730937.png',
+            '/images/cat_woman_1771716730937.png',
         ],
     },
 ];

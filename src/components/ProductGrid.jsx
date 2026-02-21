@@ -68,9 +68,9 @@ const ProductGrid = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        NEW_COLLECTION
+                        NEW_ARRIVALS
                     </motion.h2>
-                    <span className="products-subheader">&gt; SS26 // CURATED_PIECES</span>
+                    <span className="products-subheader">&gt; DROP_01 // CORE_COLLECTION</span>
                 </div>
 
                 <motion.div

@@ -29,7 +29,7 @@ const Hero = () => {
                     initial="hidden"
                     animate="visible"
                 >
-                    {'>'} SS26 // SPRING_SUMMER
+                    {'>'} DROP_01 // SS26
                 </motion.span>
 
                 <motion.h1
@@ -39,7 +39,7 @@ const Hero = () => {
                     initial="hidden"
                     animate="visible"
                 >
-                    SPRING<br />COLLECTION
+                    ENGINEERED<br />GARMENTS
                 </motion.h1>
 
                 <motion.p
@@ -49,8 +49,8 @@ const Hero = () => {
                     initial="hidden"
                     animate="visible"
                 >
-                    We don't follow trends — we engineer garments.<br />
-                    Every thread selected. Every cut calculated.
+                    We build infrastructure you wear.<br />
+                    Compiled logic. Engineered chaos. Zero compromise.
                 </motion.p>
 
                 <motion.div
@@ -61,10 +61,10 @@ const Hero = () => {
                     animate="visible"
                 >
                     <a href="#products" className="hero-banner__cta hero-banner__cta--primary">
-                        [ SHOP_MAN ]
+                        [ VIEW_COLLECTION ]
                     </a>
-                    <a href="#products" className="hero-banner__cta hero-banner__cta--secondary">
-                        [ SHOP_WOMAN ]
+                    <a href="#man" className="hero-banner__cta hero-banner__cta--secondary">
+                        [ SHOP_MENSWEAR ]
                     </a>
                 </motion.div>
             </div>

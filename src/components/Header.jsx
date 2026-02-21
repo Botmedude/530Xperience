@@ -3,10 +3,10 @@ import logo from '../assets/530_Logo_Rectangulo.svg';
 import './Header.css';
 
 const NAV_LINKS = [
-    { label: 'MAN', href: '#man' },
-    { label: 'WOMAN', href: '#woman' },
-    { label: 'KIDS', href: '#kids' },
-    { label: 'NEW_ARRIVALS', href: '#products' },
+    { label: 'MENSWEAR', href: '#man' },
+    { label: 'WOMENSWEAR', href: '#woman' },
+    { label: 'ARCHIVE', href: '#archive' },
+    { label: 'NEW_DROP', href: '#products' },
 ];
 
 const Header = () => {
@@ -23,7 +23,7 @@ const Header = () => {
             {/* ── Promo Bar ── */}
             <div className="header-promo">
                 <span className="header-promo__text">
-                    &gt; GET_20%_OFF // USE_CODE: <strong>DROP001</strong> // FREE_SHIPPING_OVER_$150
+                    &gt; SECURE_CONNECTION_ESTABLISHED // ENCRYPTION: <strong>ACTIVE</strong> // SYSTEM_ONLINE
                 </span>
             </div>
 

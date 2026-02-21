@@ -7,19 +7,19 @@ const CATEGORIES = [
         id: 'man',
         label: 'MAN',
         href: '#man',
-        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&q=80',
+        image: '/images/cat_man_1771716716009.png',
     },
     {
         id: 'woman',
         label: 'WOMAN',
         href: '#woman',
-        image: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=900&q=80',
+        image: '/images/cat_woman_1771716730937.png',
     },
     {
         id: 'kids',
-        label: 'KIDS',
-        href: '#kids',
-        image: 'https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=900&q=80',
+        label: 'ARCHIVE',
+        href: '#archive',
+        image: '/images/cat_archive_1771716742700.png',
     },
 ];
 
