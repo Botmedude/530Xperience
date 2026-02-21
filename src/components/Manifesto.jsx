@@ -1,9 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import ScrollIndicator from './ScrollIndicator';
 import './Manifesto.css';
 
-// Premium Slide-Up Reveal
 const textReveal = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -40,7 +38,6 @@ const Manifesto = () => {
                     We don't follow trends — we engineer garments. Every thread is selected, every cut is calculated, every piece is built to outlast the season it was born in. FiveThirty is not fashion. It's infrastructure you wear.
                 </motion.p>
             </div>
-            <ScrollIndicator theme="dark" />
         </section>
     );
 };

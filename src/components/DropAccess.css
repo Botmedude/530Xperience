@@ -1,53 +1,62 @@
 /* ═══════════════════════════════════════════════
-   DROP ACCESS — VIP Lead-Gen Terminal
+   DROP ACCESS — Terminal Form (White Theme)
    ═══════════════════════════════════════════════ */
 
 .drop-outer {
     width: 100%;
-    background-color: #0A0A0A;
-    color: #FFFFFF;
-    min-height: 60vh;
+    background: #ffffff;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    padding-block: 6rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-block: 6rem;
-    position: relative;
 }
 
 .drop-container {
     width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 3rem;
-    border: 2px solid #333;
-    background: #000000;
+    max-width: 700px;
+    padding-inline: 2.5rem;
 }
 
-/* ── Header ── */
+/* Terminal header label */
 .drop-header {
     margin-bottom: 3rem;
+    position: relative;
+}
+
+.drop-header::before {
+    content: '> SYSTEM.ACCESS_REQUEST';
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: #888888;
+    letter-spacing: 3px;
+    margin-bottom: 1.2rem;
 }
 
 .drop-title {
     font-family: var(--font-display);
-    font-size: 2rem;
-    color: #FFFFFF;
-    letter-spacing: 2px;
-    margin-bottom: 0.75rem;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 900;
+    color: #000000;
+    letter-spacing: var(--title-letter-spacing);
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
 }
 
 .drop-subtitle {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: #666;
-    letter-spacing: 1px;
+    font-size: 0.72rem;
+    color: #666666;
+    letter-spacing: 1.5px;
 }
 
-/* ── Form ── */
+/* Form */
 .drop-form {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .drop-group {
@@ -58,71 +67,77 @@
 
 .drop-label {
     font-family: var(--font-mono);
-    font-size: 0.8rem;
-    color: #888;
-    letter-spacing: 1px;
+    font-size: 0.65rem;
+    color: #333333;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .drop-input-wrap {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    border-bottom: 1px solid #333;
-    padding-bottom: 0.5rem;
+    border: 1px solid #000000;
+    padding: 0 1rem;
+    background: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.drop-input-wrap:focus-within {
+    box-shadow: 3px 3px 0 #000000;
+    border-color: #000000;
 }
 
 .drop-prompt {
     font-family: var(--font-mono);
-    font-size: 1rem;
-    color: #CEFF00;
-    font-weight: 700;
+    font-size: 0.85rem;
+    color: #888888;
+    flex-shrink: 0;
 }
 
 .drop-input {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: #000000;
     background: transparent;
     border: none;
-    color: #FFFFFF;
-    font-family: var(--font-mono);
-    font-size: 1rem;
-    width: 100%;
     outline: none;
+    width: 100%;
+    padding: 0.9rem 0;
+    letter-spacing: 0.5px;
 }
 
 .drop-input::placeholder {
-    color: #444;
+    color: #aaaaaa;
 }
 
-.drop-input:focus~.drop-prompt,
-.drop-input-wrap:focus-within {
-    border-color: #CEFF00;
-}
-
-/* ── Submit Button ── */
 .drop-submit {
     font-family: var(--font-mono);
-    font-size: 0.9rem;
-    color: #FFFFFF;
-    background: transparent;
-    border: 2px solid #FFFFFF;
-    padding: 1.2rem 2rem;
-    letter-spacing: 1px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    background: #000000;
+    border: 2px solid #000000;
+    padding: 1rem 2.5rem;
     cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 1rem;
+    text-transform: uppercase;
+    align-self: flex-start;
+    transition: background 0.25s ease, color 0.25s ease;
 }
 
 .drop-submit:hover {
-    background: #FFFFFF;
+    background: #ffffff;
     color: #000000;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+    border-color: #000000;
 }
 
-/* ── Status Messages ── */
+/* Status states */
 .drop-status {
     font-family: var(--font-mono);
     font-size: 1rem;
-    color: #CEFF00;
+    color: #000000;
     line-height: 2;
+    letter-spacing: 1.5px;
 }
 
 .blink {
@@ -141,33 +156,17 @@
     }
 }
 
-/* ═══════════════════════════════════════════════
-   RESPONSIVE
-   ═══════════════════════════════════════════════ */
-
 @media (max-width: 768px) {
     .drop-outer {
         padding-block: 4rem;
-        padding-inline: 1.5rem;
     }
 
     .drop-container {
-        padding: 2rem;
-        border-width: 1px;
-    }
-
-    .drop-title {
-        font-size: 1.5rem;
-    }
-
-    .drop-input {
-        font-size: 16px;
-        /* Prevent iOS zoom */
+        padding-inline: 1.5rem;
     }
 
     .drop-submit {
-        width: 100%;
-        padding: 1rem;
+        align-self: stretch;
         text-align: center;
     }
 }

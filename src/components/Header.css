@@ -1,0 +1,160 @@
+/* ═══════════════════════════════════════════════
+   HEADER — Static Sticky Top Navigation
+   ═══════════════════════════════════════════════ */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border-bottom: 1px solid #000000;
+    transition: box-shadow 0.3s ease;
+}
+
+.site-header.is-scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Promo Bar ── */
+.header-promo {
+    width: 100%;
+    background: #000000;
+    padding: 6px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.header-promo__text {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: #ffffff;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.header-promo__text strong {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* ── Main Nav ── */
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    height: 64px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+/* ── Nav Link Groups ── */
+.header-nav__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+.header-nav__links--left {
+    justify-content: flex-start;
+}
+
+.header-nav__links--right {
+    justify-content: flex-end;
+}
+
+.header-nav__link {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 0.2s ease;
+}
+
+.header-nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #000000;
+    transition: width 0.25s ease;
+}
+
+.header-nav__link:hover::after {
+    width: 100%;
+}
+
+/* ── Logo ── */
+.header-logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo__img {
+    height: 36px;
+    width: auto;
+    display: block;
+}
+
+/* ── Icon Buttons ── */
+.header-icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    transition: color 0.2s ease;
+}
+
+.header-icon-btn:hover {
+    color: #555555;
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+    .header-nav {
+        padding: 0 1.2rem;
+        gap: 1rem;
+    }
+
+    .header-nav__links {
+        gap: 1rem;
+    }
+
+    /* Hide text links on small screens, keep icons */
+    .header-nav__links--left .header-nav__link:nth-child(n+1),
+    .header-nav__links--right li:not(:last-child):not(:nth-last-child(2)) {
+        display: none;
+    }
+
+    .header-nav__link {
+        font-size: 0.65rem;
+    }
+
+    .header-logo__img {
+        height: 28px;
+    }
+}

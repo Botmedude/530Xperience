@@ -1,103 +1,121 @@
+/* ═══════════════════════════════════════════════
+   FOOTER — White B&W Terminal Footer
+   ═══════════════════════════════════════════════ */
+
 .footer-outer {
     width: 100%;
-    background-color: #000000;
-    color: #FFFFFF;
-    border-top: 1px solid #333333;
-    padding-block: 3rem 1.5rem;
-    /* Compact Vertical Height */
+    background: #000000;
+    color: #ffffff;
+    border-top: 2px solid #000000;
+    padding-top: 5rem;
+    padding-bottom: 0;
+}
+
+/* Terminal decoration */
+.footer-outer::before {
+    content: '// EOF // FIVETHIRTY_SYSTEMS';
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.2);
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 .footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
     width: 100%;
     max-width: var(--content-max-width);
     margin: 0 auto;
-    padding-inline: 2rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
-    margin-bottom: 2rem;
+    padding-inline: 2.5rem;
+    padding-bottom: 4rem;
 }
 
-.footer-col {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
+/* Brand Column */
 .footer-brand {
-    font-family: var(--font-stack);
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: #FFFFFF;
-    margin-bottom: 0.5rem;
-    letter-spacing: 2px;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* SVG logo in footer — invert to white */
+.footer-logo {
+    height: 100px;
+    width: auto;
+    display: block;
+    margin-bottom: 1.5rem;
 }
 
 .footer-location {
-    font-size: 0.7rem;
-    color: #666666;
-}
-
-.footer-label {
-    font-family: var(--font-stack);
-    font-size: 0.65rem;
-    font-weight: 700;
-    color: #666666;
-    margin-bottom: 0.25rem;
-    letter-spacing: 1px;
-}
-
-.footer-item {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: #CCCCCC;
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 1.5px;
+}
+
+/* Column Labels */
+.footer-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    display: block;
+}
+
+/* Items */
+.footer-item {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
+    letter-spacing: 0.5px;
+    padding-block: 0.3rem;
     transition: color 0.2s ease;
-    line-height: 1.8;
 }
 
 .footer-item:hover {
-    color: #CEFF00;
-    /* Radioactive Accent */
+    color: #ffffff;
 }
 
+.footer-item::before {
+    content: '— ';
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* Copyright Bar */
 .footer-copyright {
-    width: 100%;
-    max-width: var(--content-max-width);
-    margin: 0 auto;
-    padding-inline: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid #222222;
     font-family: var(--font-mono);
-    font-size: 0.65rem;
-    color: #444444;
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.25);
+    letter-spacing: 1.5px;
     text-align: center;
+    padding: 1.5rem 2.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 0;
 }
 
-/* Responsive Layout */
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+
 @media (max-width: 1024px) {
     .footer-inner {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-@media (max-width: 768px) {
-    .footer-outer {
-        padding-block: 2rem 1rem;
-    }
-
+@media (max-width: 640px) {
     .footer-inner {
         grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .footer-col {
-        gap: 0.5rem;
-    }
-
-    .footer-copyright {
-        font-size: 0.6rem;
-        padding-top: 1rem;
+        gap: 2.5rem;
     }
 }

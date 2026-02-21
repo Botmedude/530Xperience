@@ -1,27 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@400;700&display=swap');
 
 :root {
-  /* Colors */
+  /* Colors — White-first B&W */
   --bg-dark: #000000;
   --bg-light: #FFFFFF;
-  --text-main: #FFFFFF;
-  --text-inverse: #000000;
+  --bg-off-white: #F5F5F5;
+  --text-main: #000000;
+  --text-inverse: #FFFFFF;
+  --text-muted: #666666;
+  --border-color: #000000;
+  --border-light: #E0E0E0;
 
   /* Typography */
   --font-display: 'Archivo Black', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   --font-stack: var(--font-mono);
 
-  /* Layout & Spacing - The "Invisible Grid" */
+  /* Layout */
   --content-max-width: 1400px;
-  --section-padding-block: 10rem;
+  --header-height: 96px;
+  /* promo bar ~28px + nav ~64px */
+  --section-padding-block: 6rem;
   --spacing-unit: 8px;
 
-  /* Typography Standards */
+  /* Typography */
   --title-letter-spacing: -0.03em;
   --body-line-height: 1.6;
 
-  /* Premium Easing */
+  /* Easing */
   --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -37,9 +43,7 @@ body,
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
-  /* Prevents horizontal scrollbar */
-  background-color: #000000;
-  /* Default to black to hide gaps */
+  background-color: #ffffff;
   margin: 0;
   padding: 0;
 }
@@ -49,13 +53,12 @@ html {
 }
 
 body {
-  color: var(--text-inverse);
+  color: var(--text-main);
   font-family: var(--font-mono);
   -webkit-font-smoothing: antialiased;
+  background: #ffffff;
   min-height: 100vh;
 }
-
-/* Noise Overlay Removed for Minimalist Aesthetic */
 
 /* App Container */
 .app-container {
@@ -65,7 +68,12 @@ body {
   overflow-x: hidden;
 }
 
-/* Utility Classes */
+/* Push main content below fixed header */
+.app-main {
+  padding-top: var(--header-height);
+}
+
+/* Utility */
 .font-display {
   font-family: var(--font-display);
 }
@@ -74,8 +82,11 @@ body {
   font-family: var(--font-mono);
 }
 
-.text-accent {
-  color: var(--accent-primary);
+/* Terminal prompt utility */
+.terminal-prompt::before {
+  content: '> ';
+  color: var(--text-muted);
+  font-family: var(--font-mono);
 }
 
 button {

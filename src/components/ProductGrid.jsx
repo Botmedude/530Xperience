@@ -61,14 +61,17 @@ const ProductGrid = () => {
     return (
         <section className="products-outer" id="products">
             <div className="products-inner">
-                <motion.h2
-                    className="products-header"
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                >
-                    CORE_COLLECTION
-                </motion.h2>
+                <div className="products-header-block">
+                    <motion.h2
+                        className="products-header"
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        NEW_COLLECTION
+                    </motion.h2>
+                    <span className="products-subheader">&gt; SS26 // CURATED_PIECES</span>
+                </div>
 
                 <motion.div
                     className="products-grid"
