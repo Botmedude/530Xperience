@@ -32,14 +32,14 @@
     background-size: cover;
     background-position: center;
     transition: transform 0.1s steps(2, end), filter 0.1s steps(2, end);
-    filter: grayscale(100%) contrast(140%) brightness(0.7);
+    filter: contrast(130%) brightness(0.75);
     background-color: var(--bg-dark);
-    background-blend-mode: luminosity;
+    background-blend-mode: normal;
 }
 
 .catlinks-card:hover .catlinks-card__img {
     transform: scale(1.05);
-    filter: grayscale(0%) contrast(150%) brightness(0.9);
+    filter: contrast(140%) brightness(0.9);
     background-blend-mode: normal;
 }
 

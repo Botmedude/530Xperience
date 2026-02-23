@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/530_Logo_Rectangulo.svg';
 import './Header.css';
 
-const NAV_LINKS = [
-    { label: 'MENSWEAR', href: '#man' },
-    { label: 'WOMENSWEAR', href: '#woman' },
-    { label: 'ARCHIVE', href: '#archive' },
-    { label: 'NEW_DROP', href: '#products' },
+const NAV_LINKS_LEFT = [
+    { label: 'MENSWEAR', to: '/category/menswear', isRoute: true },
+    { label: 'WOMENSWEAR', to: '/category/womenswear', isRoute: true },
+];
+
+const NAV_LINKS_RIGHT = [
+    { label: 'ARCHIVE', href: '#archive', isRoute: false },
+    { label: 'NEW_DROP', href: '#products', isRoute: false },
 ];
 
 const Header = () => {
@@ -29,25 +33,25 @@ const Header = () => {
 
             {/* ── Main Nav ── */}
             <nav className="header-nav">
-                {/* Left: Nav Links */}
+                {/* Left: Routed Nav Links */}
                 <ul className="header-nav__links header-nav__links--left">
-                    {NAV_LINKS.slice(0, 2).map((link) => (
+                    {NAV_LINKS_LEFT.map((link) => (
                         <li key={link.label}>
-                            <a href={link.href} className="header-nav__link">
+                            <Link to={link.to} className="header-nav__link">
                                 {link.label}
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>
 
                 {/* Center: Logo */}
-                <a href="/" className="header-logo">
+                <Link to="/" className="header-logo">
                     <img src={logo} alt="530X Logo" className="header-logo__img" />
-                </a>
+                </Link>
 
-                {/* Right: Nav Links + Icons */}
+                {/* Right: Anchor Nav Links + Icons */}
                 <ul className="header-nav__links header-nav__links--right">
-                    {NAV_LINKS.slice(2).map((link) => (
+                    {NAV_LINKS_RIGHT.map((link) => (
                         <li key={link.label}>
                             <a href={link.href} className="header-nav__link">
                                 {link.label}

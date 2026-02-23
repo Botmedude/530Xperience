@@ -19,9 +19,9 @@
     background-image: url('/images/banner_img_1771716702201.png');
     background-size: cover;
     background-position: center 20%;
-    filter: grayscale(100%) contrast(140%) brightness(0.6);
+    filter: contrast(130%) brightness(0.6);
     background-color: var(--bg-dark);
-    background-blend-mode: luminosity;
+    background-blend-mode: normal;
 }
 
 .catbanner-overlay {

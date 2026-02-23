@@ -30,7 +30,7 @@
     display: block;
     font-family: var(--font-mono);
     font-size: 0.65rem;
-    color: var(--accent-magenta);
+    color: var(--color-accent, #E6E4DD);
     font-weight: bold;
     letter-spacing: 3px;
     margin-bottom: 1.2rem;
@@ -86,15 +86,15 @@
 }
 
 .drop-input-wrap:focus-within {
-    box-shadow: 4px 4px 0 var(--accent-magenta);
-    border-color: var(--accent-magenta);
+    box-shadow: 4px 4px 0 #000000;
+    border-color: #000000;
     transform: translate(-4px, -4px);
 }
 
 .drop-prompt {
     font-family: var(--font-mono);
     font-size: 0.85rem;
-    color: var(--accent-magenta);
+    color: #000000;
     font-weight: bold;
     flex-shrink: 0;
 }
@@ -133,9 +133,9 @@
 }
 
 .drop-submit:hover {
-    background: var(--accent-volt);
+    background: #FFFFFF;
     color: #000000;
-    border-color: var(--accent-volt);
+    border-color: #000000;
     transform: translate(4px, 4px);
     box-shadow: -4px -4px 0px #000000;
 }

@@ -12,9 +12,9 @@ export const coreTheme = {
     colors: {
         primary: '#000000',
         secondary: '#FFFFFF',
-        accent: '#CEFF00',       // Electric Volt
-        accentAlt: '#FF00FF',    // Cyber Magenta
-        accentTertiary: '#00F0FF', // Laser Blue
+        accent: '#FFFFFF',       // Pure White
+        accentAlt: '#E6E4DD',    // Archive Bone
+        accentTertiary: '#E6E4DD', // Archive Bone
         surface: '#0F0F0F',
         surfaceLight: '#1A1A1A',
         textPrimary: '#FFFFFF',

@@ -1,26 +1,19 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Manifesto from './components/Manifesto';
-import ProductGrid from './components/ProductGrid';
-import CategoryBanner from './components/CategoryBanner';
-import CategoryLinks from './components/CategoryLinks';
-import DropAccess from './components/DropAccess';
-import Footer from './components/Footer';
+import Home from './pages/Home';
+import CategoryPage from './pages/CategoryPage';
 
 function App() {
   return (
     <div className="app-container">
+      <ScrollToTop />
       <Header />
-      <main className="app-main">
-        <Hero />
-        <ProductGrid />
-        <CategoryBanner />
-        <CategoryLinks />
-        <Manifesto />
-        <DropAccess />
-        <Footer />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/category/:id" element={<CategoryPage />} />
+      </Routes>
     </div>
   );
 }

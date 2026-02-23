@@ -11,10 +11,11 @@
   --border-color: #333333;
   --border-light: #444444;
 
-  /* RADIOACTIVE ACCENTS */
-  --accent-volt: #CEFF00;
-  --accent-magenta: #FF00FF;
-  --accent-blue: #00F0FF;
+  /* PREMIUM ACCENTS — Archive Bone */
+  --accent-volt: #FFFFFF;
+  --accent-magenta: #E6E4DD;
+  --accent-blue: #E6E4DD;
+  --color-accent: #E6E4DD;
 
   /* Typography */
   --font-display: 'Archivo Black', sans-serif;

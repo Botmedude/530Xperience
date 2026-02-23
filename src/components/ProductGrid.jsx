@@ -55,8 +55,10 @@ const ProductCard = ({ product }) => {
     );
 };
 
-const ProductGrid = () => {
-    const products = getProductsByBrand('core');
+const ProductGrid = ({ products: externalProducts, title, subtitle }) => {
+    const products = externalProducts || getProductsByBrand('core');
+    const headerTitle = title || 'NEW_ARRIVALS';
+    const headerSubtitle = subtitle || '> DROP_01 // CORE_COLLECTION';
 
     return (
         <section className="products-outer" id="products">
@@ -68,9 +70,9 @@ const ProductGrid = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        NEW_ARRIVALS
+                        {headerTitle}
                     </motion.h2>
-                    <span className="products-subheader">&gt; DROP_01 // CORE_COLLECTION</span>
+                    <span className="products-subheader">{headerSubtitle}</span>
                 </div>
 
                 <motion.div
