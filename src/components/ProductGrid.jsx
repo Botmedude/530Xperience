@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { getProductsByBrand } from '../data/products';
 import './ProductGrid.css';
 
@@ -36,6 +37,7 @@ const ProductCard = ({ product }) => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
+            <Link to={`/product/${product.id}`} className="product-card__link-overlay" aria-label={`View ${product.title}`} />
             <div className="product-card__image-wrap">
                 <img
                     src={isHovered ? product.images[1] : product.images[0]}
@@ -44,7 +46,15 @@ const ProductCard = ({ product }) => {
                     loading="lazy"
                 />
                 <div className={`product-card__overlay ${isHovered ? 'is-visible' : ''}`}>
-                    <button className="product-card__cart-btn">[ ADD_TO_CART ]</button>
+                    <button
+                        className="product-card__cart-btn"
+                        onClick={(e) => {
+                            e.preventDefault(); // Prevenir navegación
+                            alert(`ADDED TO CART -> ${product.title}`);
+                        }}
+                    >
+                        [ ADD_TO_CART ]
+                    </button>
                 </div>
             </div>
             <div className="product-card__info">

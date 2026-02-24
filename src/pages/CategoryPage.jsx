@@ -104,23 +104,23 @@ const CategoryPage = () => {
                 </div>
             </motion.div>
 
-            {/* ── Layout: Sidebar + Grid ── */}
+            {/* ── Layout: Filters & Grid ── */}
             <div className="category-layout">
-                {/* Sidebar Filters */}
-                <aside className="category-sidebar">
-                    <span className="category-sidebar__label">// FILTER_BY</span>
-                    <nav className="category-sidebar__nav">
+                {/* Top Filters */}
+                <div className="category-filters">
+                    <span className="category-filters__label">// FILTER_BY:</span>
+                    <nav className="category-filters__nav">
                         {FILTER_TYPES.map((filter) => (
                             <button
                                 key={filter.key}
-                                className={`category-sidebar__btn ${activeFilter === filter.key ? 'is-active' : ''}`}
+                                className={`category-filters__btn ${activeFilter === filter.key ? 'is-active' : ''}`}
                                 onClick={() => setActiveFilter(filter.key)}
                             >
                                 {filter.label}
                             </button>
                         ))}
                     </nav>
-                </aside>
+                </div>
 
                 {/* Product Grid */}
                 <div className="category-content">
