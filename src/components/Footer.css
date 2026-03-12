@@ -1,121 +1,112 @@
 /* ═══════════════════════════════════════════════
-   FOOTER — White B&W Terminal Footer
+   FOOTER — Compact Industrial Terminal
    ═══════════════════════════════════════════════ */
 
-.footer-outer {
+.footer {
     width: 100%;
     background: #000000;
     color: #ffffff;
-    border-top: 2px solid #000000;
-    padding-top: 5rem;
-    padding-bottom: 0;
+    padding: 48px 80px 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* Terminal decoration */
-.footer-outer::before {
-    content: '// EOF // FIVETHIRTY_SYSTEMS';
-    display: block;
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
+.footer-eof {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
     color: rgba(255, 255, 255, 0.2);
-    letter-spacing: 3px;
     text-align: center;
-    margin-bottom: 3rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 32px;
 }
 
-.footer-inner {
+/* Grid — 4 equal columns */
+.footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 3rem;
-    width: 100%;
-    max-width: var(--content-max-width);
-    margin: 0 auto;
-    padding-inline: 2.5rem;
-    padding-bottom: 4rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: start;
 }
 
-/* Brand Column */
+/* Brand column — logo + tagline */
 .footer-brand {
-    font-family: var(--font-display);
-    font-size: 2rem;
-    color: #ffffff;
-    letter-spacing: -0.02em;
-    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-logo-main {
+    width: 110px;
+    height: auto;
     display: block;
+    opacity: 1;
 }
 
-/* SVG logo in footer — invert to white */
-.footer-logo {
-    height: 100px;
-    width: auto;
-    display: block;
-    margin-bottom: 1.5rem;
+.footer-tagline {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #E6E4DD;
+    letter-spacing: 0.04em;
+    margin: 0;
+    opacity: 0.7;
 }
 
-.footer-location {
-    font-family: var(--font-mono);
-    font-size: 0.65rem;
+/* Column titles */
+.footer-col-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
     color: rgba(255, 255, 255, 0.4);
-    letter-spacing: 1.5px;
-}
-
-/* Column Labels */
-.footer-label {
-    font-family: var(--font-mono);
-    font-size: 0.62rem;
-    color: rgba(255, 255, 255, 0.4);
-    letter-spacing: 3px;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    margin-bottom: 1.2rem;
-    display: block;
+    margin: 0 0 12px 0;
 }
 
-/* Items */
-.footer-item {
-    display: block;
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.7);
+/* Column links */
+.footer-col-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #FFFFFF;
     text-decoration: none;
-    letter-spacing: 0.5px;
-    padding-block: 0.3rem;
-    transition: color 0.2s ease;
+    letter-spacing: 0.06em;
+    display: block;
+    margin-bottom: 8px;
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
 }
 
-.footer-item:hover {
-    color: #ffffff;
+.footer-col-link:hover {
+    opacity: 1;
 }
 
-.footer-item::before {
-    content: '— ';
-    color: rgba(255, 255, 255, 0.2);
-}
-
-/* Copyright Bar */
-.footer-copyright {
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
-    color: rgba(255, 255, 255, 0.25);
-    letter-spacing: 1.5px;
-    text-align: center;
-    padding: 1.5rem 2.5rem;
+/* Copyright bar */
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
-    margin-top: 0;
+    text-align: center;
+}
+
+.footer-copyright {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.2);
+    letter-spacing: 0.1em;
 }
 
 /* ═══════════════════════════════════════════════
    RESPONSIVE
    ═══════════════════════════════════════════════ */
 
-@media (max-width: 1024px) {
-    .footer-inner {
-        grid-template-columns: 1fr 1fr;
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 24px 24px;
     }
-}
-
-@media (max-width: 640px) {
-    .footer-inner {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+    }
+    .footer-brand {
+        grid-column: 1 / -1;
     }
 }

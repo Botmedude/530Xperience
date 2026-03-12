@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/530_Logo_Rectangulo.svg';
+import logoSecundario from '../assets/logos/logo-secundario.svg';
 import './Header.css';
 
 const NAV_LINKS_LEFT = [
@@ -46,7 +46,7 @@ const Header = () => {
 
                 {/* Center: Logo */}
                 <Link to="/" className="header-logo">
-                    <img src={logo} alt="530X Logo" className="header-logo__img" />
+                    <img src={logoSecundario} alt="530 Systems" className="nav-logo-icon" />
                 </Link>
 
                 {/* Right: Anchor Nav Links + Icons */}
