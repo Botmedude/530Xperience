@@ -23,7 +23,7 @@ const DropAccess = () => {
             <section className="drop-outer">
                 <div className="drop-container">
                     <div className="drop-status">
-                        &gt; UPLOADING BYTES...<br />
+                        &gt; ENVIANDO DATOS...<br />
                         <span className="blink">_</span>
                     </div>
                 </div>
@@ -36,8 +36,8 @@ const DropAccess = () => {
             <section className="drop-outer">
                 <div className="drop-container">
                     <div className="drop-status">
-                        &gt; ACCESS_GRANTED.<br />
-                        &gt; YOU'RE ON THE LIST. STAND BY FOR DROP_001.
+                        &gt; ACCESO_CONCEDIDO.<br />
+                        &gt; ESTÁS EN LA LISTA. PREPÁRATE PARA EL DROP_001.
                     </div>
                 </div>
             </section>
@@ -48,19 +48,19 @@ const DropAccess = () => {
         <section className="drop-outer" id="drop-access">
             <div className="drop-container">
                 <div className="drop-header">
-                    <h2 className="drop-title">VIP_DROP_ACCESS</h2>
-                    <p className="drop-subtitle">&gt; EXCLUSIVE EARLY ACCESS TO LIMITED RELEASES</p>
+                    <h2 className="drop-title">ACCESO_ANTICIPADO</h2>
+                    <p className="drop-subtitle">&gt; Primero en enterarte. Primero en comprar.</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="drop-form">
                     <div className="drop-group">
-                        <label className="drop-label">EMAIL_ADDRESS</label>
+                        <label className="drop-label">CORREO_ELECTRÓNICO</label>
                         <div className="drop-input-wrap">
                             <span className="drop-prompt">&gt;</span>
                             <input
                                 type="email"
                                 className="drop-input"
-                                placeholder="your@address.node"
+                                placeholder="tu@correo.com"
                                 value={formData.email}
                                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                 required
@@ -69,13 +69,13 @@ const DropAccess = () => {
                     </div>
 
                     <div className="drop-group">
-                        <label className="drop-label">PREFERENCE</label>
+                        <label className="drop-label">PREFERENCIA</label>
                         <div className="drop-input-wrap">
                             <span className="drop-prompt">&gt;</span>
                             <input
                                 type="text"
                                 className="drop-input"
-                                placeholder="M / W / ALL"
+                                placeholder="H / M / AMBOS"
                                 value={formData.preference}
                                 onChange={(e) => setFormData({ ...formData, preference: e.target.value })}
                             />
@@ -83,7 +83,7 @@ const DropAccess = () => {
                     </div>
 
                     <button type="submit" className="drop-submit">
-                        [ REQUEST_ACCESS ]
+                        [ SOLICITAR ACCESO ]
                     </button>
                 </form>
             </div>

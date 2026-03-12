@@ -1,0 +1,127 @@
+/* ═══════════════════════════════════════════════
+   BRAND INTRO — Declaración de marca
+   ═══════════════════════════════════════════════ */
+
+.brand-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 92vh;
+    background: #000000;
+    overflow: hidden;
+}
+
+/* ── COLUMNA IZQUIERDA ── */
+.brand-intro__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 60px 56px;
+    gap: 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand-intro__label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #E6E4DD;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.55;
+}
+
+.brand-intro__title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(44px, 5.5vw, 88px);
+    font-weight: 900;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    line-height: 0.92;
+    margin: 0;
+}
+
+.brand-intro__body {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #E6E4DD;
+    line-height: 1.9;
+    opacity: 0.65;
+    max-width: 280px;
+    margin: 0;
+}
+
+.brand-intro__cta {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #FFFFFF;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    border: 1px solid #FFFFFF;
+    padding: 12px 20px;
+    width: fit-content;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.brand-intro__cta:hover {
+    background: #FFFFFF;
+    color: #000000;
+}
+
+/* ── COLUMNA DERECHA ── */
+.brand-intro__visual {
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-intro__image-wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+}
+
+.brand-intro__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: grayscale(15%) contrast(1.05);
+    transition: transform 0.6s ease;
+}
+
+.brand-intro:hover .brand-intro__image {
+    transform: scale(1.02);
+}
+
+.brand-intro__visual-tag {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: #E6E4DD;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    opacity: 0.4;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+    .brand-intro {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .brand-intro__visual {
+        height: 55vw;
+        min-height: 260px;
+        position: relative;
+    }
+
+    .brand-intro__text {
+        padding: 40px 24px;
+        border-right: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+}

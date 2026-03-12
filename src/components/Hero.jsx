@@ -29,7 +29,7 @@ const Hero = () => {
                     initial="hidden"
                     animate="visible"
                 >
-                    {'>'} DROP_01 // SS26
+                    {'>'} TEMPORADA_01 // CIUDAD DE MÉXICO
                 </motion.span>
 
                 <motion.h1
@@ -39,7 +39,7 @@ const Hero = () => {
                     initial="hidden"
                     animate="visible"
                 >
-                    ENGINEERED<br />GARMENTS
+                    ENTRE LA<br />CALLE Y<br />EL SASTRE.
                 </motion.h1>
 
                 <motion.p
@@ -49,8 +49,8 @@ const Hero = () => {
                     initial="hidden"
                     animate="visible"
                 >
-                    We build infrastructure you wear.<br />
-                    Compiled logic. Engineered chaos. Zero compromise.
+                    Ropa que no pide permiso.<br />
+                    Cortes que duran más que las tendencias.
                 </motion.p>
 
                 <motion.div
@@ -61,10 +61,10 @@ const Hero = () => {
                     animate="visible"
                 >
                     <a href="#products" className="hero-banner__cta hero-banner__cta--primary">
-                        [ VIEW_COLLECTION ]
+                        [ VER COLECCIÓN ]
                     </a>
                     <a href="#man" className="hero-banner__cta hero-banner__cta--secondary">
-                        [ SHOP_MENSWEAR ]
+                        [ NUEVO INGRESO ]
                     </a>
                 </motion.div>
             </div>

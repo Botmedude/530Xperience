@@ -25,7 +25,7 @@ const Manifesto = () => {
                     whileInView="visible"
                     viewport={{ once: true, margin: '-100px' }}
                 >
-                    SEASON_01 //<br />RAW MATERIALS.<br />ZERO COMPROMISE.
+                    NO SEGUIMOS<br />TEMPORADAS.<br />HACEMOS<br />PRENDAS.
                 </motion.h2>
 
                 <motion.p
@@ -35,7 +35,11 @@ const Manifesto = () => {
                     whileInView="visible"
                     viewport={{ once: true, margin: '-100px' }}
                 >
-                    We don't follow trends — we engineer garments. Every thread is rigorously tested, every seam is structurally defined, every pattern is built to outlast the season it was compiled in. FiveThirty is not just fashion. It's digital concrete you can wear.
+                    530 Systems nació en México con una idea simple:
+                    que la ropa bien cortada no tiene que costar una fortuna
+                    ni verse como todas las demás.<br />
+                    Brutalismo en la forma. Cuidado en el detalle.<br />
+                    Sin logos grandes. Sin gritos innecesarios.
                 </motion.p>
             </div>
         </section>

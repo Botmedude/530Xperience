@@ -15,7 +15,7 @@ const CategoryBanner = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.1, ease: "linear" }}
                 >
-                    {'>'} ARMOR // DAILY_DEPLOYMENT
+                    {'>'} TEMPORADA_01 // CIUDAD DE MÉXICO
                 </motion.span>
 
                 <motion.h2
@@ -25,7 +25,7 @@ const CategoryBanner = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.1, duration: 0.1, ease: "linear" }}
                 >
-                    TACTICAL<br />AESTHETIC
+                    ENTRE LA<br />CALLE Y<br />EL SASTRE.
                 </motion.h2>
 
                 <motion.p
@@ -35,7 +35,7 @@ const CategoryBanner = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.2, duration: 0.1, ease: "linear" }}
                 >
-                    Utilitarian gear engineered for the modern grid.
+                    Ropa que no pide permiso. Cortes que duran más que las tendencias.
                 </motion.p>
 
                 <motion.a
@@ -46,7 +46,7 @@ const CategoryBanner = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.45, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                 >
-                    [ SEE_ALL ]
+                    [ VER COLECCIÓN ]
                 </motion.a>
             </div>
         </section>

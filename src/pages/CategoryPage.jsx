@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getProductsByCategory } from '../data/products';
 import ProductGrid from '../components/ProductGrid';
-import Footer from '../components/Footer';
+
 import './CategoryPage.css';
 
 const CATEGORY_MAP = {
@@ -50,7 +50,7 @@ const CategoryPage = () => {
                         <h1 className="category-header__title">404 // NOT_FOUND</h1>
                     </div>
                 </div>
-                <Footer />
+
             </div>
         );
     }
@@ -133,7 +133,7 @@ const CategoryPage = () => {
                 </div>
             </div>
 
-            <Footer />
+
         </div>
     );
 };

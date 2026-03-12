@@ -52,18 +52,13 @@
 }
 
 .catbanner-headline {
-    font-family: var(--font-display);
+    font-family: 'Archivo Black', sans-serif;
     font-size: clamp(2.5rem, 5vw, 6rem);
-    color: var(--bg-dark);
-    line-height: 0.85;
-    letter-spacing: -0.05em;
+    color: #FFFFFF;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
     margin-bottom: 1.2rem;
-    text-shadow:
-        -2px -2px 0 var(--accent-volt),
-        2px -2px 0 var(--accent-volt),
-        -2px 2px 0 var(--accent-volt),
-        2px 2px 0 var(--accent-volt);
 }
 
 .catbanner-sub {
